@@ -6,7 +6,7 @@
 class Robot {
 public:
     explicit Robot();
-    virtual ~Robot() = default; // Virtual destructor for safe polymorphic deletion
+    virtual ~Robot() = default;
 
     // Function to move a servo to a specified angle
     void moveServoToAngle(int servoNum, double angle);
