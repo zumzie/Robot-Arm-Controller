@@ -9,8 +9,9 @@ class RobotController {
 
   public:
     RobotController(Robot* robot); // Constructor
-    void rotateLeft();
-    void rotateRight();
+    void yawRotation(bool yawRotationDirection);
+    void pitchRotation(bool pitchRotationDirection, int servoNum);
+    void resetPositions();
 
     // Methods for end effector actions
     void openEndEffector();
