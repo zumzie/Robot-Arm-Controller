@@ -8,10 +8,8 @@
 #define USMAX  2400 // This is the rounded 'maximum' microsecond length based on the maximum pulse of 600
 #define SERVO_FREQ 50 // Analog servos run at ~50 Hz updat
 
-constexpr int SERVO_MAX_ANGLE = 180; // Adjust these values based on your servo specifications
+constexpr int SERVO_MAX_ANGLE = 180;
 constexpr int SERVO_MIN_ANGLE = 0;
-
-// Servo Configuration
 
 // Declare the indices for specific servos
 #define BASE_SERVO_INDEX 0

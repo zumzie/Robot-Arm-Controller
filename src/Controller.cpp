@@ -10,10 +10,9 @@ void RobotController::yawRotation(bool yawRotationDirection) {
     int baseJoint = robot->getServoAngle(robot->getBaseServo());
     Serial.print("Current angle: "); Serial.println(baseJoint);
 
-    int newAngle = baseJoint + (yawRotationDirection ? 1 : -1); // Increment or decrement
+    int newAngle = baseJoint + (yawRotationDirection ? 1 : -1);
     Serial.print("Attempted new angle: "); Serial.println(newAngle);
 
-    // Ensure the new angle is within the valid range
     newAngle = max(min(newAngle, SERVO_MAX_ANGLE), SERVO_MIN_ANGLE);
     Serial.print("Constrained new angle: "); Serial.println(newAngle);
 
@@ -25,10 +24,9 @@ void RobotController::pitchRotation(bool pitchRotationDirection, int servo) {
     int jointAngle = robot->getServoAngle(servo);
     Serial.print("Current angle: "); Serial.println(jointAngle);
 
-    int newAngle = jointAngle + (pitchRotationDirection ? 1 : -1); // Increment or decrement
+    int newAngle = jointAngle + (pitchRotationDirection ? 1 : -1);
     Serial.print("Attempted new angle: "); Serial.println(newAngle);
 
-    // Ensure the new angle is within the valid range
     newAngle = max(min(newAngle, SERVO_MAX_ANGLE), SERVO_MIN_ANGLE);
     Serial.print("Constrained new angle: "); Serial.println(newAngle);
 

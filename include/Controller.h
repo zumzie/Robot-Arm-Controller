@@ -1,14 +1,14 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include "Robot.h" // Include directly if using functionalities specific to RobotEndEffector
+#include "Robot.h"
 
 class RobotController {
   private:
-    Robot* robot; // Use pointer for dynamic allocation or direct object for static
+    Robot* robot;
 
   public:
-    RobotController(Robot* robot); // Constructor
+    RobotController(Robot* robot);
     void yawRotation(bool yawRotationDirection);
     void pitchRotation(bool pitchRotationDirection, int servoNum);
     void resetPositions();

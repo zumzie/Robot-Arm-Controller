@@ -5,7 +5,6 @@
 
 extern Adafruit_PWMServoDriver pwm;
 
-// Adjusted constructor to initialize all member variables
 Robot::Robot()
     : servoCount(SERVO_COUNT), baseServo(BASE_SERVO_INDEX), endEffectorServo(END_EFFECTOR_SERVO_INDEX),
       servoLinkOne(SERVO_ONE_INDEX), servoLinkTwo(SERVO_TWO_INDEX) {}
